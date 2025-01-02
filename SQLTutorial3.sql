@@ -31,7 +31,7 @@ UPDATE [SQLTutorial ].dbo.EmployeeDemographics
 SET Age = 31, Gender = 'Female'
 WHERE EmployeeID = 1012
 
---Truco, arrancar con un Select y después reemplazar el Select por el Delete.
+--Truco, arrancar con un Select y despuï¿½s reemplazar el Select por el Delete.
 
 DELETE FROM [SQLTutorial ].dbo.EmployeeDemographics
 WHERE EmployeeID = 1005
@@ -71,7 +71,7 @@ JOIN [SQLTutorial ].dbo.EmployeeSalary Sal
 	ON Dem.EmployeeID = Sal.EmployeeID
 GROUP BY Dem.Gender
 
---CTEs (Common Table Expression) in memmory
+--CTEs (Common Table Expression) in memmoryy
 WITH CTE_Employee AS (
 	SELECT 
 		Emp.FirstName, 
