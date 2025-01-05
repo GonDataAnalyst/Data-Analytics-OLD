@@ -105,3 +105,79 @@ OR City = (
     ORDER BY CHAR_LENGTH(City) DESC, City
     LIMIT 1
 );
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL11'
+
+SELECT
+    DISTINCT(City)
+FROM Station
+WHERE (City LIKE "a%") OR (City LIKE "e%") OR (City LIKE "i%") OR (City LIKE "o%") OR (City LIKE "u%")
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL12'
+
+SELECT
+    DISTINCT(City)
+FROM Station
+WHERE (City LIKE "%a") OR (City LIKE "%e") OR (City LIKE "%i") OR (City LIKE "%o") OR (City LIKE "%u")
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL13'
+
+SELECT
+    DISTINCT(City)
+FROM Station
+WHERE ((City LIKE "a%") OR (City LIKE "e%") OR (City LIKE "i%") OR (City LIKE "o%") OR (City LIKE "u%")) AND ((City LIKE "%a") OR (City LIKE "%e") OR (City LIKE "%i") OR (City LIKE "%o") OR (City LIKE "%u"))
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL14'
+
+SELECT
+    DISTINCT(City)
+FROM Station
+WHERE (City NOT LIKE "a%") AND (City NOT LIKE "e%") AND (City NOT LIKE "i%") AND (City NOT LIKE "o%") AND (City NOT LIKE "u%")
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL15'
+
+SELECT
+    DISTINCT(City)
+FROM Station
+WHERE (City NOT LIKE "%a") AND (City NOT LIKE "%e") AND (City NOT LIKE "%i") AND (City NOT LIKE "%o") AND (City NOT LIKE "%u")
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL16'
+
+SELECT
+    DISTINCT(City)
+FROM Station
+WHERE ((City NOT LIKE "a%") AND (City NOT LIKE "e%") AND (City NOT LIKE "i%") AND (City NOT LIKE "o%") AND (City NOT LIKE "u%")) 
+OR    ((City NOT LIKE "%a") AND (City NOT LIKE "%e") AND (City NOT LIKE "%i") AND (City NOT LIKE "%o") AND (City NOT LIKE "%u"))
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL17'
+
+SELECT
+    DISTINCT(City)
+FROM Station
+WHERE ((City NOT LIKE "a%") AND (City NOT LIKE "e%") AND (City NOT LIKE "i%") AND (City NOT LIKE "o%") AND (City NOT LIKE "u%")) 
+AND   ((City NOT LIKE "%a") AND (City NOT LIKE "%e") AND (City NOT LIKE "%i") AND (City NOT LIKE "%o") AND (City NOT LIKE "%u"))
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL18'
+
+SELECT
+    Name
+FROM Students
+WHERE Marks > 75
+ORDER BY RIGHT(Name,3), ID
+
+SELECT
+    Name
+FROM Students
+WHERE Marks > 75
+ORDER BY SUBSTRING(Name, LENGTH(Name) - 2, 3), ID ASC
+
+
+-- Ver "SQLLevelPractice.docx" 'SQL19'
