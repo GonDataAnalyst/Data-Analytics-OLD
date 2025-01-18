@@ -1,2 +1,2 @@
 # Data-Analytics
-Data Analytics from scratch to god
+Data Analytics
